@@ -7,6 +7,10 @@ function Form() {
 
   const handleSubmit = (e) => {
     e.preventDefault();
+    if(name.trim()===""||age<=0){
+      alert("please enter your name and age correctly");
+      return;
+    }
     const newuser={name,age};
     addUser(newuser);
     console.log(newuser);
